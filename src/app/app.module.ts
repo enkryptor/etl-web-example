@@ -5,8 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { ExchangeRateComponent } from './currency-list/exchange-rate/exchange-rate.component';
-import { DATA_SOURCE_TOKEN, CbrJsonDataSource, CbrXmlDataSource } from './business-logic/data-sources';
+import { DATA_SOURCE_LIST, DATA_SOURCE_TOKEN } from './business-logic/data-sources';
 
+const dataSources = DATA_SOURCE_LIST.map(source => (
+  { provide: DATA_SOURCE_TOKEN, useClass: source, multi: true}
+));
 
 @NgModule({
   declarations: [
@@ -19,8 +22,7 @@ import { DATA_SOURCE_TOKEN, CbrJsonDataSource, CbrXmlDataSource } from './busine
     HttpClientModule
   ],
   providers: [
-    { provide: DATA_SOURCE_TOKEN, useClass: CbrJsonDataSource, multi: true},
-    { provide: DATA_SOURCE_TOKEN, useClass: CbrXmlDataSource, multi: true},
+    ...dataSources
   ],
   bootstrap: [AppComponent]
 })
