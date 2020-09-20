@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CurrencyExchangeRate } from 'src/app/business-logic/models'
+import { CurrencyExchangeRate } from 'src/app/business-logic/interfaces'
 
 const DECIMAL_PLACES = 4;
 
@@ -11,7 +11,7 @@ const DECIMAL_PLACES = 4;
   templateUrl: './exchange-rate.component.html',
   styleUrls: ['./exchange-rate.component.css']
 })
-export class ExchangeRateComponent implements OnInit {
+export class ExchangeRateComponent {
 
   @Input()
   public set rate(rate: CurrencyExchangeRate) {
@@ -19,10 +19,4 @@ export class ExchangeRateComponent implements OnInit {
   }
 
   public value: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { switchMap, startWith, catchError, map } from 'rxjs/operators';
-import { CurrencyExchangeRate } from './models';
+import { CurrencyExchangeRate } from './interfaces';
 import { DataSource, DATA_SOURCE_TOKEN } from './data-sources';
 
 const QUERY_INTERVAL_MS = 10000;

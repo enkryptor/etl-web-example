@@ -2,8 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
-import { CurrencyExchangeRate } from '../models';
-import { StringParser } from '../interfaces';
+import { StringParser, CurrencyExchangeRate } from '../interfaces';
 
 export abstract class HttpDataSource {
   protected abstract url: string;

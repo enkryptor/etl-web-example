@@ -1,5 +1,4 @@
-import { StringParser } from 'src/app/business-logic/interfaces';
-import { CurrencyExchangeRate } from 'src/app/business-logic/models';
+import { StringParser, CurrencyExchangeRate } from 'src/app/business-logic/interfaces';
 
 interface ParsedDataFormat {
   Valute: {

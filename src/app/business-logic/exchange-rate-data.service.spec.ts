@@ -3,7 +3,7 @@ import { first } from 'rxjs/operators';
 import { DataSource } from './data-sources';
 
 import { ExchangeRateDataService } from './exchange-rate-data.service';
-import { CurrencyExchangeRate } from './models';
+import { CurrencyExchangeRate } from './interfaces';
 
 describe('ExchangeRateDataService', () => {
   it('should give first value', () => {
