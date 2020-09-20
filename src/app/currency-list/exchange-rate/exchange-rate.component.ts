@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CurrencyExchangeRate } from 'src/app/models-bl';
+import { CurrencyExchangeRate } from 'src/app/business-logic/models'
 
 const DECIMAL_PLACES = 4;
 

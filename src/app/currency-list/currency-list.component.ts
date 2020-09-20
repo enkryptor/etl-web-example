@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CurrencyExchangeRate } from '../models-bl/currency-exchange-rate.interface';
-import { ExchangeRateDataService } from '../services/exchange-rate-data.service';
+import { ExchangeRateDataService } from 'src/app/business-logic/exchange-rate-data.service';
+import { CurrencyExchangeRate } from 'src/app/business-logic/models';
 
 /**
  * "Умный" компонент для показа курсов обмена валют

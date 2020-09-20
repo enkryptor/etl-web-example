@@ -1,10 +1,10 @@
-import { DataSource } from './data-source';
+import { HttpDataSource } from './http-data-source';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { XmlParser } from './parsers/xml-parser';
 
 @Injectable()
-export class CbrXmlDataSource extends DataSource {
+export class CbrXmlDataSource extends HttpDataSource {
   constructor(http: HttpClient) {
     super(http)
   }

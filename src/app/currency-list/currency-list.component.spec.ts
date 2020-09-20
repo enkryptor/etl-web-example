@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DATA_SOURCE_TOKEN } from '../business-logic/data-sources';
+import { ExchangeRateDataService } from '../business-logic/exchange-rate-data.service';
 
 import { CurrencyListComponent } from './currency-list.component';
 
@@ -8,7 +10,11 @@ describe('CurrencyListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CurrencyListComponent ]
+      declarations: [ CurrencyListComponent ],
+      providers: [
+        { provide: DATA_SOURCE_TOKEN, useValue: [ { getData: () => [] }] },
+        ExchangeRateDataService
+      ]
     })
     .compileComponents();
   });

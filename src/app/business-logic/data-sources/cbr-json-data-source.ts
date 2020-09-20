@@ -1,10 +1,10 @@
-import { DataSource } from './data-source';
+import { HttpDataSource } from './http-data-source';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JsonParser } from './parsers/json-parser';
 
 @Injectable()
-export class CbrJsonDataSource extends DataSource {
+export class CbrJsonDataSource extends HttpDataSource {
   constructor(http: HttpClient) {
     super(http)
   }

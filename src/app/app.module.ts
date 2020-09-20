@@ -5,9 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { ExchangeRateComponent } from './currency-list/exchange-rate/exchange-rate.component';
-import { DATA_SOURCE_TOKEN } from './data-sources/data-source';
-import { CbrJsonDataSource } from './data-sources/cbr-json-data-source';
-import { CbrXmlDataSource } from './data-sources/cbr-xml-data-source';
+import { DATA_SOURCE_TOKEN, CbrJsonDataSource, CbrXmlDataSource } from './business-logic/data-sources';
+
 
 @NgModule({
   declarations: [
