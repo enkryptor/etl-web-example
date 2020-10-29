@@ -3,8 +3,9 @@ import { Observable, interval } from 'rxjs';
 import { switchMap, startWith, catchError, map } from 'rxjs/operators';
 import { CurrencyExchangeRate } from './interfaces';
 import { DataSource, DATA_SOURCE_TOKEN } from './data-sources';
+import { environment } from 'src/environments/environment';
 
-const QUERY_INTERVAL_MS = 10000;
+const QUERY_INTERVAL_MS = environment.queryIntervalMs;
 
 function euroFilter(data: CurrencyExchangeRate): boolean {
   return data.code === 'EUR';
