@@ -1,7 +1,7 @@
 import { HttpDataSource } from './http-data-source';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { JsonParser } from './parsers/json-parser';
+import { CbrJsonParser } from './parsers';
 
 @Injectable()
 export class CbrJsonDataSource extends HttpDataSource {
@@ -11,5 +11,5 @@ export class CbrJsonDataSource extends HttpDataSource {
 
   protected url = 'https://www.cbr-xml-daily.ru/daily_json.js';
 
-  protected parser = new JsonParser();
+  protected parser = new CbrJsonParser();
 }
